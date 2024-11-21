@@ -1,0 +1,62 @@
+<div class="sale-card">
+            <!-- Seller's Items -->
+            <div class="items-container">
+                <img src="{{ sale.seller.username|get_head_url }}" alt="{{ sale.seller.username }}" class="player-head" />
+                <h3 id="user-{{ sale.seller.username }}" class="seller">{{ sale.seller.username }}</h3>
+                <ul class="item-list">
+                    {% for item in sale.seller_items %}
+                        <li>
+                            {% if item.quantity == 1 %}
+                                {% if item.content_type.model == "skin" %}
+                                    {{ item.item.name | parse_skin }}
+                                {% elif item.content_type.model == "coin" %}
+                                    {{ item.item.amount | formatCoins }}
+                                {% endif %}
+                            {% else %}
+                                {% if item.content_type.model == "skin" %}
+                                    {{ item.quantity }} x {{ item.item.name | parse_skin }}
+                                {% elif item.content_type.model == "coin" %}
+                                    {{ item.item.amount | formatCoins }}
+                                {% endif %}
+                            {% endif %}
+                        </li>
+                    {% empty %}
+                        <li>No items</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Arrow -->
+            <div class="arrow">➡</div>
+
+            <!-- Buyer's Items -->
+            <div class="items-container">
+                <img src="{{ sale.buyer.username|get_head_url }}" alt="{{ sale.buyer.username }}" class="player-head" />
+                <h3 id="user-{{ sale.buyer.username }}" class="buyer">{{ sale.buyer.username }}</h3>
+                <ul class="item-list">
+                    {% for item in sale.buyer_items %}
+                        <li>
+                            {% if item.quantity == 1 %}
+                                {% if item.content_type.model == "skin" %}
+                                    {{ item.item.name | parse_skin }}
+                                {% elif item.content_type.model == "coin" %}
+                                    {{ item.item.amount | formatCoins }}
+                                {% endif %}
+                            {% else %}
+                                {% if item.content_type.model == "skin" %}
+                                    {{ item.quantity }} x {{ item.item.name | parse_skin }}
+                                {% elif item.content_type.model == "coin" %}
+                                    {{ item.item.amount | formatCoins }}
+                                {% endif %}
+                            {% endif %}
+                        </li>
+                    {% empty %}
+                        <li>No items</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No trade sales available.</p>
+{% endif %}

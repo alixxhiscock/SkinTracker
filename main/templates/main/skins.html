@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ user.username }} Details</title>
+</head>
+<body>
+{% load static %}
+{% load filters %}
+<link rel="stylesheet" href="{% static 'main/style.css' %}">
+<script src="{% static 'main/js/jquery-3.6.0.js' %}"></script>
+
+<div class="main-title-container">
+    <div class="main-title">Skin List</div>
+        <input id="search-box" class="search-box" name="q" value="{{ query }}" placeholder="Search skins..." autocomplete="off"/>
+</div>
+
+
+<table id="skin-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th><a href="#" class="sortable" data-sort="name">Skin Name</a></th>
+                <th><a href="#" class="sortable" data-sort="quantity">Quantity</a></th>
+                <th><a href="#" class="sortable" data-sort="lbin">Lowest BIN</a></th>
+                <th><a href="#" class="sortable" data-sort="price">Cost</a></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="skin-table-body">
+            {% for skin in skins %}
+                <tr>
+                    <td><img class = "table_skin_image" src="{{skin.image_url}}" alt="{{ skin.name }}"></td>
+                    <td>{{ skin.name | parse_skin }}</td>
+                    <td> {{ skin.quantity }}</td>
+                    <td>{{ skin.lbin | formatCoins }}</td>
+                    <td>{{ skin.price }}</td>
+                    <td><a href="{% url 'skin' skin.name %}" class="clickable">View Skin</a></td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6">No owned skins found for this user.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<script>
+    function updateImages() {
+    $('img.table_skin_image').each(function () {
+        if (!$(this).attr('src')) {
+            $(this).attr('src', $(this).data('src'));
+        }
+    });
+    }
+    $(document).ready(function () {
+        var reverse = false
+        // Dynamic search: update the table as the user types
+        $('#search-box').on('input', function () {
+            const query = $(this).val().replace(" ","_");  // Get the current input value
+            console.log("Searching for:", query);  // Debugging line
+                $.ajax({
+                    url: '{% url "search_skins" %}',  // URL for the search API view
+                    method: 'GET',
+                    data: { q: query },  // Send the search query to the server
+                    success: function (response) {
+                        console.log("Success response:", response);  // Debugging line
+                        $('#skin-table-body').html(response.html);
+                        updateImages()
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error fetching search results:', error);  // Debugging line
+                    }
+                });
+        });
+        $('.sortable').on('click', function (e) {
+            e.preventDefault();
+            const sortBy = $(this).data('sort');  // Get the column to sort by
+            const query = $('#search-box').val().replace(" ","_");  // Get the current search query
+            $.ajax({
+                url: '{% url "search_skins" %}',  // URL for the search API view
+                method: 'GET',
+                data: {
+                    q: query,  // Send the search query to the server
+                    sort_by: sortBy,  // Send the sorting parameter
+                    order: reverse
+                },
+                success: function (response) {
+                    $('#skin-table-body').html(response.html);
+                    reverse = !reverse
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error fetching sorted results:', error);  // Debugging line
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

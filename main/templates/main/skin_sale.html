@@ -1,0 +1,53 @@
+{% load static %}
+{% load filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ sale.seller_items.0.item.readable}} Sale </title>
+</head>
+<body>
+<link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <div class="sale-card">
+                <!-- Seller's Items -->
+                <div class="items-container">
+                    <h3>{{ sale.seller.username}}</h3>
+                    <ul class="item-list">
+                        {% for item in sale.seller_items %}
+                            <li>
+                                {% if item.quantity == 1 %}
+                                    {{ item.item }}
+                                {% else %}
+                                    {{ item.quantity }} x {{ item.item }}
+                                {% endif %}
+                            </li>
+                        {% empty %}
+                            <li>No items</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- Arrow -->
+                <div class="arrow">➡</div>
+
+                <!-- Buyer's Items -->
+                <div class="items-container">
+                    <h3>{{ sale.buyer.username }}</h3>
+                    <ul class="item-list">
+                        {% for item in sale.buyer_items %}
+                            <li>
+                                {% if item.quantity == 1 %}
+                                    {{ item.item }}
+                                {% else %}
+                                    {{ item.quantity }} x {{ item.item }}
+                                {% endif %}
+                            </li>
+                        {% empty %}
+                            <li>No items</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+</body>
+</html>

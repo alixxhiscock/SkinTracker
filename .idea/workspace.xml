@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="01f90529-ce19-4ac5-b641-869ceb9f790d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/SkinTracker.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/middleware.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/skinSetup/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/skinSetup/getAllSkins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/skinSetup/unparsedURLs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/skinSetup/urlextract/addquotes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/skinSetup/urlextract/allskinshtml - Copy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/skinSetup/urlextract/backup - Copy.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/skinSetup/urlextract/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/skinSetup/urlextract/testing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/img/coins.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/js/jquery-3.6.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/js/userHighlight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/skin_detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/main/skin_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/main/skin_sale.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/main/skins.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/main/user_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/partials/skin_table_rows.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templatetags/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/utils/add_sale.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/utils/cofl_mapping" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/csvSkin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/getLbin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/makeSale.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/makeSale2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/recentAuctions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/temp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/tempcsv.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2ozGdSmdypQDWshqSMd9dfDMdaq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.SkinTracker.executor": "Run",
+    "Python.addquotes.executor": "Run",
+    "Python.csvToDB.executor": "Run",
+    "Python.getAllSkins.executor": "Run",
+    "Python.getLbin.executor": "Run",
+    "Python.getallURLs.executor": "Run",
+    "Python.makeSale.executor": "Run",
+    "Python.setup_database_skins.executor": "Run",
+    "Python.temp.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.testing.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/dev/SkinTracker/main/static/main/img",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\SkinTracker\main\static\main\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\SkinTracker\main\static\main\img" />
+      <recent name="C:\dev\SkinTracker\media\skins" />
+      <recent name="C:\dev\SkinTracker\main\static\main\js" />
+      <recent name="C:\dev\SkinTracker\main\static\main" />
+      <recent name="C:\dev\SkinTracker\scripts" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SkinTracker" type="Python.DjangoServer" factoryName="Django server">
+      <module name="SkinTracker" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="SkinTracker.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
+        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="01f90529-ce19-4ac5-b641-869ceb9f790d" name="Changes" comment="" />
+      <created>1731865077550</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731865077550</updated>
+      <workItem from="1731865078594" duration="48685000" />
+      <workItem from="1731979664770" duration="7333000" />
+      <workItem from="1732017388366" duration="1771000" />
+      <workItem from="1732036737671" duration="5501000" />
+      <workItem from="1732042250181" duration="6330000" />
+      <workItem from="1732050082522" duration="1400000" />
+      <workItem from="1732058678813" duration="12190000" />
+      <workItem from="1732109223766" duration="3000" />
+      <workItem from="1732115923603" duration="35421000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SkinTracker$csvToDB.coverage" NAME="csvToDB Coverage Results" MODIFIED="1731943273708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/SkinTracker$test.coverage" NAME="test Coverage Results" MODIFIED="1731937874285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/skinSetup/urlextract" />
+    <SUITE FILE_PATH="coverage/SkinTracker$temp.coverage" NAME="temp Coverage Results" MODIFIED="1731984247648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/SkinTracker$getLbin.coverage" NAME="getLbin Coverage Results" MODIFIED="1731947321224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/SkinTracker$getAllSkins.coverage" NAME="getAllSkins Coverage Results" MODIFIED="1731933987264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/skinSetup" />
+    <SUITE FILE_PATH="coverage/SkinTracker$makeSale.coverage" NAME="makeSale Coverage Results" MODIFIED="1731984289897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/SkinTracker$getallURLs.coverage" NAME="getallURLs Coverage Results" MODIFIED="1731932066522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/skinSetup" />
+    <SUITE FILE_PATH="coverage/SkinTracker$setup_database_skins.coverage" NAME="setup_database_skins Coverage Results" MODIFIED="1731941973869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/utils" />
+    <SUITE FILE_PATH="coverage/SkinTracker$addquotes.coverage" NAME="addquotes Coverage Results" MODIFIED="1731935942395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/skinSetup/urlextract" />
+    <SUITE FILE_PATH="coverage/SkinTracker$testing.coverage" NAME="testing Coverage Results" MODIFIED="1731939640006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/skinSetup/urlextract" />
+  </component>
+</project>

@@ -1,0 +1,15 @@
+{% load filters %}
+{% for skin in skins %}
+    <tr>
+        <td><img class="table_skin_image" data-src="{{ skin.image_url }}" src = "" loading = "lazy" alt="{{ skin.name }}"></td>
+        <td>{{ skin.name | parse_skin }}</td>
+        <td>{{ skin.quantity }}</td>
+        <td>{{ skin.lbin | formatCoins }}</td>
+        <td>{{ skin.price }}</td>
+        <td><a href="{% url 'skin' skin.name %}" class="clickable">View Skin</a></td>
+    </tr>
+{% empty %}
+    <tr>
+        <td colspan="6">No owned skins found for this user.</td>
+    </tr>
+{% endfor %}

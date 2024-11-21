@@ -1,0 +1,151 @@
+/* Font-face for CircularBold */
+@font-face {
+    font-family: 'CircularBold'; 
+    src: url('https://www.gmefloor.com/fonts/circular-bold.otf?6baed2bf580964bec9559ad83caee43d') format('opentype');
+}
+
+/* General Body Styling */
+body {
+    background-color: #28282B;
+    font-family: 'CircularBold', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Title Styling */
+.main-title {
+    font-size: 70px;
+    margin-top: 20px;
+    padding: 10px;
+    border-bottom: 3px solid #4270ed; /* Subtle underline */
+}
+
+/* Table Styling */
+table {
+    width: 100%; /* Set the table to 80% of the page width for better spacing */
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd; /* Soft border */
+}
+
+th {
+    background-color: #333; /* Dark background for headers */
+    color: #4270ed; /* Accent color for text */
+}
+
+td {
+    background-color: #424242; /* Slightly lighter background for cells */
+}
+
+/* Row Hover Effect */
+tr:hover {
+    background-color: #555; /* Change row color on hover */
+    cursor: pointer;
+}
+
+/* Styling for Skin Image */
+.table_skin_image {
+    width: 80px; /* Smaller image size */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #4270ed; /* Border around the image */
+}
+
+/* Dropdown Toggle Button */
+.dropdown-button {
+    background-color: #4270ed;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Dropdown Content Styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #424242;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content p {
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Show dropdown when clicked */
+.show-dropdown .dropdown-content {
+    display: block;
+}
+
+.main-title-container {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+.total-value-box {
+    position: absolute;
+    top:0;
+    right:20px;
+    background-color:#4270ed;
+    color:white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.search-box{
+    position: absolute;
+    bottom:20px;
+    right:20px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.clickable {
+    background-color:#4270ed;
+    color:white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 25px;
+    vertical-align: center;
+    display:block;
+    height: 100%;  /* Make the anchor expand to the full height of the parent */
+    text-align: center;  /* Center the text inside the button */
+    align-items: center; /* Center the text vertically */
+    justify-content: center; /* Center the text horizontally */
+    flex-grow: 1;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+a:visited {
+    color: inherit;  /* Inherit color from parent element */
+}

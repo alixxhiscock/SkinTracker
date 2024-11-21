@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ skin.name }}</title>
+</head>
+<body>
+{% load static %}
+{% load filters %}
+<link rel="stylesheet" href="{% static 'main/style.css' %}">
+<link rel="stylesheet" href="{% static 'main/skin_detail.css' %}">
+<script src="{% static 'main/js/userHighlight.js' %}" defer></script>
+
+{% if skin.image_url %}
+    <img src="{{ skin.image_url }}" alt="{{ skin.name }}" id="skin_image" />
+{% else %}
+    <p>No image available for this skin.</p>
+{% endif %}
+
+<div class="main-title">{{ skin.name | parse_skin}}</div>
+<p>Release Date: {{ skin.release_date }}</p>
+<p>Lowest BIN Price: ${{ skin.lbin }}</p>
+<p>Cost in gems: {{ skin.price }}</p>
+<p>Can be combined in anvil with: {{ skin.item }}</p>
+
+<!-- Display Auctions -->
+<h1>Recent Activity</h1>
+<ul>
+<div class='sales-container'>
+    {% for activity in recent %}
+            <div class="sale-card">
+            <li>
+                {% if activity.type == "auction" %}
+                    <div class="sale-details">
+                        <!-- Buyer Info -->
+                        <div class="buyer-info">
+                            <img src="{{ activity.buyer.username|get_head_url }}" alt="{{ activity.buyer.username }}" class="player-head">
+                            <span class="buyer-username">Buyer: {{ activity.buyer.username }}</span>
+                        </div>
+
+                    <!-- Seller Info -->
+                    <div class="seller-info">
+                        <img src="{{ activity.seller.username|get_head_url }}" alt="{{ activity.seller.username }}" class="player-head">
+                        <span class="seller-username">Seller: {{ activity.seller.username }}</span>
+                    </div>
+
+                    <!-- Item Info -->
+                    <div class="item-info">
+                        <img src="{{ skin.image_url }}" alt="{{ activity.item_name }}" class="item-image">
+                        <span class="item-name">Item: {{ activity.item_name }}</span>
+                    </div>
+
+                    <!-- Price Info -->
+                    <div class="price-info">
+                        <img src="{% static 'main/img/coins.png' %}" alt="Coins" class="coin-image">
+                        <span class="price">Coins: {{ activity.price|formatCoins }}</span>
+                    </div>
+
+                    <!-- Timestamp -->
+                    <div class="timestamp">
+                        <span>Timestamp: {{ activity.timestamp }}</span>
+                    </div>
+                {% else %}
+                    <div class="sale-details">
+                        <!-- Buyer Info -->
+                        <div class="buyer-info">
+                            <img src="{{ activity.buyer.username|get_head_url }}" alt="{{ activity.buyer.username }}" class="player-head">
+                            <span class="buyer-username">Buyer: {{ activity.buyer.username }}</span>
+                            <div class="buyer-items">
+                                {% for item in activity.buyer_items %}
+                                    <div class="item-container">
+                                        {% if item.content_type.model == "coin" %}
+                                            <div class="coin">
+                                                <img src="{% static 'main/img/coins.png' %}" alt="Coins" class="coin-image">
+                                                <span class="price">Coins: {{ item.item.amount|formatCoins }}</span>
+                                            </div>
+                                        {% else %}
+                                            <div class="skin">
+                                                <img src="{{ item.item.image_url }}" alt="{{ item.item.name }}" class="item-image">
+                                                {{ item.item.name |parse_skin}}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!-- Seller Info -->
+                        <div class="seller-info">
+                            <img src="{{ activity.seller.username|get_head_url }}" alt="{{ activity.seller.username }}" class="player-head">
+                            <span class="seller-username">Seller: {{ activity.seller.username }}</span>
+                            <div class="seller-items">
+                                {% for item in activity.seller_items %}
+                                    <div class="item-container">
+                                        {% if item.content_type.model == "coin" %}
+                                            <div class="coin">
+                                                <img src="{% static 'main/img/coins.png' %}" alt="Coins" class="coin-image">
+                                                <span class="price">Coins: {{ item.item.amount|formatCoins }}</span>
+                                            </div>
+                                        {% else %}
+                                            <div class="skin">
+                                                <img src="{{ item.item.image_url }}" alt="{{ item.item.name }}" class="item-image">
+                                                <span class="skin_name">{{ item.item.name |parse_skin}}</span>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!-- Timestamp -->
+                {% endif %}
+                </div>
+                <div class="timestamp">
+                    <span>Timestamp: {{ activity.timestamp }}</span>
+                </div>
+        </div>
+    {% empty %}
+        <li>No recent activity.</li>
+    {% endfor %}
+    </div>
+</div>
+</ul>
+</body>
+</html>

@@ -1,0 +1,82 @@
+.sales-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+    gap: 20px; /* Space between the cards */
+    padding: 20px;
+    margin: 0 auto;
+}
+.sale-card {
+    background-color: #3c4146;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 10px; /* Space between the sections */
+}
+.sale-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.sale-details {
+    display: flex;
+    flex-direction: row; /* Stack buyer, seller, item info vertically */
+    gap: 10px; /* Add space between buyer, seller, item, etc. */
+}
+
+/* Flex layout for buyer, seller, item, and price info */
+.buyer-info, .seller-info, .item-info, .price-info, .timestamp {
+    display: flex;
+    flex-direction: column; /* Align elements horizontally */
+    gap: 10px; /* Add space between images and text */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Player and Item Image Styling */
+.player-head, .item-image, .coin-image {
+    width: 50px; /* Consistent image size */
+    height: 50px;
+    border-radius: 50%; /* Circular shape for heads */
+    margin-right: 10px; /* Spacing between image and text */
+}
+
+/* Styling for the buyer and seller text */
+.buyer-username, .seller-username {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Styling for Item and Price info */
+.item-name, .price , .skin_name{
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    padding-bottom: 10%;
+}
+.item{
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+
+}
+.timestamp {
+    font-size: 0.9rem;
+    color: white;
+    background-color: #333739;
+    padding: 5px;
+    border-radius: 5px;
+}
+ul, ol {
+    list-style: none;
+    padding-left: 0;
+}
+.no-sales-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin: 20px 0;
+}
