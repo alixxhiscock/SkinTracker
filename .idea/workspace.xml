@@ -5,45 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01f90529-ce19-4ac5-b641-869ceb9f790d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/SkinTracker.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/middleware.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/skinSetup/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/skinSetup/getAllSkins.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/skinSetup/unparsedURLs.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/skinSetup/urlextract/addquotes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/skinSetup/urlextract/allskinshtml - Copy.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/skinSetup/urlextract/backup - Copy.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/skinSetup/urlextract/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/skinSetup/urlextract/testing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/static/main/img/coins.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/static/main/js/jquery-3.6.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/static/main/js/userHighlight.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/static/main/skin_detail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/static/main/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/main/skin_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/main/skin_sale.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/main/skins.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/main/user_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templates/partials/skin_table_rows.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/templatetags/filters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/utils/add_sale.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/utils/cofl_mapping" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/csvSkin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/getLbin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/makeSale.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/makeSale2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/recentAuctions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/temp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/tempcsv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/main/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/main/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/csvtoAuction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinTracker/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SkinTracker/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinTracker/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/SkinTracker/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/skin_detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/main/css/skin_detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/main/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/skin_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/skin_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/skin_sale.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/skin_sale.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/skins.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/skins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/user_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/user_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/partials/skin_table_rows.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/partials/skin_table_rows.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templatetags/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/templatetags/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/utils/add_sale.csv" beforeDir="false" afterPath="$PROJECT_DIR$/main/utils/add_sale.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/recentAuctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/recentAuctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/temp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,15 +38,27 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;alixxhiscock&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/alixxhiscock/SkinTracker.git&quot;,
+    &quot;accountId&quot;: &quot;ed99b5f5-5995-42ae-a52d-1b7d541b2ddc&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -74,52 +68,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.SkinTracker.executor": "Run",
-    "Python.addquotes.executor": "Run",
-    "Python.csvToDB.executor": "Run",
-    "Python.getAllSkins.executor": "Run",
-    "Python.getLbin.executor": "Run",
-    "Python.getallURLs.executor": "Run",
-    "Python.makeSale.executor": "Run",
-    "Python.setup_database_skins.executor": "Run",
-    "Python.temp.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.testing.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
-    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/dev/SkinTracker/main/static/main/img",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.SkinTracker.executor&quot;: &quot;Run&quot;,
+    &quot;Python.addquotes.executor&quot;: &quot;Run&quot;,
+    &quot;Python.csvToDB.executor&quot;: &quot;Run&quot;,
+    &quot;Python.getAllSkins.executor&quot;: &quot;Run&quot;,
+    &quot;Python.getLbin.executor&quot;: &quot;Run&quot;,
+    &quot;Python.getallURLs.executor&quot;: &quot;Run&quot;,
+    &quot;Python.makeSale.executor&quot;: &quot;Run&quot;,
+    &quot;Python.setup_database_skins.executor&quot;: &quot;Run&quot;,
+    &quot;Python.temp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testing.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/dev/SkinTracker/main/static/main/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\dev\SkinTracker\main\static\main\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\SkinTracker\main\static\main\css" />
       <recent name="C:\dev\SkinTracker\main\static\main\img" />
       <recent name="C:\dev\SkinTracker\media\skins" />
       <recent name="C:\dev\SkinTracker\main\static\main\js" />
       <recent name="C:\dev\SkinTracker\main\static\main" />
-      <recent name="C:\dev\SkinTracker\scripts" />
     </key>
   </component>
   <component name="RunManager">
@@ -173,7 +167,9 @@
       <workItem from="1732050082522" duration="1400000" />
       <workItem from="1732058678813" duration="12190000" />
       <workItem from="1732109223766" duration="3000" />
-      <workItem from="1732115923603" duration="35421000" />
+      <workItem from="1732115923603" duration="41190000" />
+      <workItem from="1732221647935" duration="10632000" />
+      <workItem from="1732239425134" duration="11000" />
     </task>
     <servers />
   </component>

@@ -9,7 +9,7 @@ from itertools import chain
 # Create your views here.
 
 def dashboard(request):
-    return HttpResponse("Dashboard")
+    return render(request,'main/dashboard.html')
 
 def skin(request, skin_name):
     skin = get_object_or_404(Skin, name=skin_name)
@@ -17,7 +17,7 @@ def skin(request, skin_name):
         skin_content_type = ContentType.objects.get_for_model(Skin)
         sale_items = SaleItem.objects.filter(content_type=skin_content_type,object_id=skin.id)
         sales = Sale.objects.filter(items__in=sale_items).annotate(type=Value('sale',output_field=CharField()))
-        auctions = Auction.objects.filter(item_name=skin).annotate(type=Value('auction',output_field=CharField()))
+        auctions = Auction.objects.filter(item=skin).annotate(type=Value('auction',output_field=CharField()))
         combined = chain(sales,auctions)
         recent = sorted(combined,key=lambda obj: obj.timestamp, reverse=True)
     except Sale.DoesNotExist:

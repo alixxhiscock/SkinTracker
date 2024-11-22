@@ -1,7 +1,7 @@
 {% load filters %}
 {% for skin in skins %}
     <tr>
-        <td><img class="table_skin_image" data-src="{{ skin.image_url }}" src = "" loading = "lazy" alt="{{ skin.name }}"></td>
+        <td><img class="table_skin_image" src = "{{ skin.image_url }}"  alt="{{ skin.name }}"></td>
         <td>{{ skin.name | parse_skin }}</td>
         <td>{{ skin.quantity }}</td>
         <td>{{ skin.lbin | formatCoins }}</td>

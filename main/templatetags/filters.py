@@ -25,7 +25,10 @@ def multiply(a,b):
 @register.filter(name="formatCoins")
 def formatCoins(value):
     if value >= 1_000_000_000:
-        return f"{value / 1_000_000_000:.1f}b"  # Convert to billions
+        try:
+            return f"{int(value / 1_000_000_000)}b"  # Convert to billions
+        except TypeError:
+            return f"{value / 1_000_000_000:.1f}b"
     elif value >= 1_000_000:
         return f"{value / 1_000_000:.0f}m"  # Convert to millions
     else:

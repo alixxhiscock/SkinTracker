@@ -89,8 +89,8 @@ class Auction(models.Model):
     seller = models.ForeignKey(User, on_delete=models.CASCADE, related_name="auction_seller")
     buyer = models.ForeignKey(User, on_delete=models.CASCADE, related_name="auction_buyer")
     price = models.PositiveIntegerField()
-    item_name = models.ForeignKey(Skin, on_delete=models.CASCADE)
+    item = models.ForeignKey(Skin, on_delete=models.CASCADE)
     timestamp = models.DateTimeField()
 
     def __str__(self):
-        return f"{self.seller} sold {self.item_name} for {self.price} coins"
+        return f"{self.seller} sold {self.item} for {self.price} coins"

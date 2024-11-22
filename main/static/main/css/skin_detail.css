@@ -16,6 +16,15 @@
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+.sale-card-title {
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:1px;
+    width:160px;
+    text-align:center;
+    margin:auto;
+    white-space:nowrap;
+}
 .sale-details {
     display: flex;
     flex-direction: row; /* Stack buyer, seller, item info vertically */
@@ -39,29 +48,29 @@
     margin-right: 10px; /* Spacing between image and text */
 }
 
-/* Styling for the buyer and seller text */
-.buyer-username, .seller-username {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #007bff;
-}
-
 /* Styling for Item and Price info */
-.item-name, .price , .skin_name{
+.item-name, .price , .skin-name, .buyer-username, .seller-username {
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    padding-bottom: 10%;
+    vertical-align: middle;
+    margin-bottom: 10px;
+    margin-top:7px;
+    padding:4px 0;
+    background-color: #333739;
+    border-radius: 5px;
+}
+.item-image, .coin-image {
+    margin-bottom:20px;
 }
 .item{
-    padding:20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     font-weight: bold;
-
+    margin: auto;
 }
 .timestamp {
     font-size: 0.9rem;
@@ -79,4 +88,33 @@ ul, ol {
     font-size: 1.2rem;
     color: #6c757d;
     margin: 20px 0;
+}
+.info {
+    display: flex; /* Align items in a row */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 15px; /* Space between info items */
+    background-color: #3c4146; /* Dark background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Space inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Center the container */
+    max-width: 600px; /* Limit the container width */
+}
+/* Individual info items */
+.info-item {
+    background-color: #333739; /* Slightly lighter than the container */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 15px; /* Space inside each item */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    flex: 1; /* Allow items to grow equally */
+    min-width: 150px; /* Ensure items don’t get too small */
+    text-align: center; /* Center-align text */
+}
+.info-item p {
+    margin: 0; /* Remove default margins */
+    font-size: 1rem; /* Adjust text size */
+    font-weight: bold; /* Make text bold */
+}
+#skin-image{
+    padding-top: 50px;
 }

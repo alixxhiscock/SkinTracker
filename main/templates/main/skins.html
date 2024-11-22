@@ -8,7 +8,7 @@
 <body>
 {% load static %}
 {% load filters %}
-<link rel="stylesheet" href="{% static 'main/style.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
 <script src="{% static 'main/js/jquery-3.6.0.js' %}"></script>
 
 <div class="main-title-container">
@@ -46,13 +46,6 @@
         </tbody>
     </table>
 <script>
-    function updateImages() {
-    $('img.table_skin_image').each(function () {
-        if (!$(this).attr('src')) {
-            $(this).attr('src', $(this).data('src'));
-        }
-    });
-    }
     $(document).ready(function () {
         var reverse = false
         // Dynamic search: update the table as the user types

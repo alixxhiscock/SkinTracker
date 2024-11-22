@@ -8,21 +8,29 @@
 <body>
 {% load static %}
 {% load filters %}
-<link rel="stylesheet" href="{% static 'main/style.css' %}">
-<link rel="stylesheet" href="{% static 'main/skin_detail.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/skin_detail.css' %}">
 <script src="{% static 'main/js/userHighlight.js' %}" defer></script>
 
 {% if skin.image_url %}
-    <img src="{{ skin.image_url }}" alt="{{ skin.name }}" id="skin_image" />
+    <img src="{{ skin.image_url }}" alt="{{ skin.name }}" id="skin-image" />
 {% else %}
     <p>No image available for this skin.</p>
 {% endif %}
 
 <div class="main-title">{{ skin.name | parse_skin}}</div>
-<p>Release Date: {{ skin.release_date }}</p>
-<p>Lowest BIN Price: ${{ skin.lbin }}</p>
-<p>Cost in gems: {{ skin.price }}</p>
-<p>Can be combined in anvil with: {{ skin.item }}</p>
+<div class="info">
+    <div class="info-item">
+        <p>Release Date: {{ skin.release_date }}</p>
+    </div>
+    <div class="info-item">
+        {% if skin.lbin %}
+            <p>Current BIN: {{ skin.lbin|formatCoins}}</p>
+        {% else %}
+            <p>No current listings on auction.</p>
+        {% endif %}
+    </div>
+</div>
 
 <!-- Display Auctions -->
 <h1>Recent Activity</h1>
@@ -32,53 +40,54 @@
             <div class="sale-card">
             <li>
                 {% if activity.type == "auction" %}
+                    <h3 class="sale-card-title">Auction</h3>
                     <div class="sale-details">
                         <!-- Buyer Info -->
                         <div class="buyer-info">
                             <img src="{{ activity.buyer.username|get_head_url }}" alt="{{ activity.buyer.username }}" class="player-head">
-                            <span class="buyer-username">Buyer: {{ activity.buyer.username }}</span>
+                            <span class="buyer-username">{{ activity.buyer.username }}</span>
+                            <div class="buyer-items">
+                                <div class="item">
+                                    <img src="{% static 'main/img/coins.png' %}" alt="Coins" class="coin-image">
+                                    <div class="item-name">
+                                        <span class="item-name-bg">Coins: {{ activity.price|formatCoins }}</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     <!-- Seller Info -->
                     <div class="seller-info">
                         <img src="{{ activity.seller.username|get_head_url }}" alt="{{ activity.seller.username }}" class="player-head">
-                        <span class="seller-username">Seller: {{ activity.seller.username }}</span>
-                    </div>
-
-                    <!-- Item Info -->
-                    <div class="item-info">
-                        <img src="{{ skin.image_url }}" alt="{{ activity.item_name }}" class="item-image">
-                        <span class="item-name">Item: {{ activity.item_name }}</span>
-                    </div>
-
-                    <!-- Price Info -->
-                    <div class="price-info">
-                        <img src="{% static 'main/img/coins.png' %}" alt="Coins" class="coin-image">
-                        <span class="price">Coins: {{ activity.price|formatCoins }}</span>
-                    </div>
-
-                    <!-- Timestamp -->
-                    <div class="timestamp">
-                        <span>Timestamp: {{ activity.timestamp }}</span>
+                        <span class="seller-username">{{ activity.seller.username }}</span>
+                        <div class="seller-items">
+                            <div class="item">
+                                <img src="{{ activity.item.image_url }}" alt="{{ activity.item.name }}" class="item-image">
+                                <div class="skin-name">
+                                    <span class="item-name-bg">{{ activity.item.name |parse_skin}}</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 {% else %}
+                    <h3 class="sale-card-title">Trade</h3>
                     <div class="sale-details">
                         <!-- Buyer Info -->
                         <div class="buyer-info">
                             <img src="{{ activity.buyer.username|get_head_url }}" alt="{{ activity.buyer.username }}" class="player-head">
-                            <span class="buyer-username">Buyer: {{ activity.buyer.username }}</span>
+                            <span class="buyer-username">{{ activity.buyer.username }}</span>
                             <div class="buyer-items">
                                 {% for item in activity.buyer_items %}
-                                    <div class="item-container">
+                                    <div class="item">
                                         {% if item.content_type.model == "coin" %}
-                                            <div class="coin">
-                                                <img src="{% static 'main/img/coins.png' %}" alt="Coins" class="coin-image">
-                                                <span class="price">Coins: {{ item.item.amount|formatCoins }}</span>
+                                            <img src="{% static 'main/img/coins.png' %}" alt="Coins" class="coin-image">
+                                            <div class="item-name">
+                                                <span class="item-name-bg">Coins: {{ item.item.amount|formatCoins }}</span>
                                             </div>
                                         {% else %}
-                                            <div class="skin">
-                                                <img src="{{ item.item.image_url }}" alt="{{ item.item.name }}" class="item-image">
-                                                {{ item.item.name |parse_skin}}
+                                            <img src="{{ item.item.image_url }}" alt="{{ item.item.name }}" class="item-image">
+                                            <div class="skin-name">
+                                                <span class="item-name-bg">{{ item.item.name |parse_skin}}</span>
                                             </div>
                                         {% endif %}
                                     </div>
@@ -88,19 +97,19 @@
                         <!-- Seller Info -->
                         <div class="seller-info">
                             <img src="{{ activity.seller.username|get_head_url }}" alt="{{ activity.seller.username }}" class="player-head">
-                            <span class="seller-username">Seller: {{ activity.seller.username }}</span>
+                            <span class="seller-username">{{ activity.seller.username }}</span>
                             <div class="seller-items">
                                 {% for item in activity.seller_items %}
-                                    <div class="item-container">
+                                    <div class="item">
                                         {% if item.content_type.model == "coin" %}
-                                            <div class="coin">
-                                                <img src="{% static 'main/img/coins.png' %}" alt="Coins" class="coin-image">
-                                                <span class="price">Coins: {{ item.item.amount|formatCoins }}</span>
+                                            <img src="{% static 'main/img/coins.png' %}" alt="Coins" class="coin-image">
+                                            <div class="item-name">
+                                                <span class="item-name-bg">Coins: {{ item.item.amount|formatCoins }}</span>
                                             </div>
                                         {% else %}
-                                            <div class="skin">
-                                                <img src="{{ item.item.image_url }}" alt="{{ item.item.name }}" class="item-image">
-                                                <span class="skin_name">{{ item.item.name |parse_skin}}</span>
+                                            <img src="{{ item.item.image_url }}" alt="{{ item.item.name }}" class="item-image">
+                                            <div class="skin-name">
+                                                <span class="item-name-bg">{{ item.item.name |parse_skin}}</span>
                                             </div>
                                         {% endif %}
                                     </div>

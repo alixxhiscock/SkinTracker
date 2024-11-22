@@ -55,5 +55,5 @@ def getUsername(uuid):
     else:
         print(f"Error fetching username for UUID {uuid}: {response.status_code}")
 
-getAuctionsJSON(Skin.objects.get(name="monochrome_elephant"))
+getAuctionsJSON(Skin.objects.get(name="lunar_rat"))
 #getBidder("b118f3e66e204021b573e9807276d614")
